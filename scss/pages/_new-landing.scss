@@ -10,7 +10,7 @@
     &__main-hero {
         display: flex;
         justify-content: center;
-        height: 450px;
+        height: 280px; //will need adjusted height
         background: white;
         border-bottom: 1px solid rgba(0, 0, 0, .23);
     }
@@ -21,8 +21,8 @@
         justify-content: space-around;
         background-color: white;
         width: 100%;
-        margin-top: 80px;
-        padding-left: 1rem;
+        margin-top: 100px;
+        // padding-left: 1rem;
     }
     &__hero-tile {
         display: flex;
@@ -34,8 +34,8 @@
         box-shadow: 0 0 18px 0 rgba(45, 45, 45, .10);
         height: 45%;
         width: 45%;
-        min-width: 300px;
-        min-height: 300px;
+        min-width: 150px;
+        min-height: 150px;
         z-index: 10;
         transition: all 250ms ease-out;
     }
@@ -47,14 +47,46 @@
         border-radius: 2px;
         background-repeat: no-repeat;
         margin-top: 20px;
-        height: 160px;
-        width: 160px;
+        height: 60px;
+        width: 60px;
     }
     &__tile-title {
-        font-size: 26px;
+        font-size: 16px;
         font-weight: bold;
         color: $color-v2-purple;
         text-decoration: none;
+        margin: 0;
+    }
+    @include md {
+        &__main-hero {
+            // display: flex;
+            // justify-content: center;
+            height: 450px;
+            // background: white;
+            // border-bottom: 1px solid rgba(0, 0, 0, .23);
+        }
+        &__hero-tile-container {
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 80px;
+            // padding-left: 1rem;
+        }
+        &__hero-tile {
+            height: 45%;
+            width: 45%;
+            min-width: 300px;
+            min-height: 300px;
+        }
+        &__tile-logo {
+            margin-top: 20px;
+            height: 160px;
+            width: 160px;
+        }
+        &__tile-title {
+            font-size: 26px;
+            font-weight: bold;
+        }
     }
 }
 
